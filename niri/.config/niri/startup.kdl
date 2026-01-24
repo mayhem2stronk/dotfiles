@@ -1,0 +1,6 @@
+spawn-at-startup "firefox"
+spawn-sh-at-startup "sleep 2 && vesktop"
+spawn-at-startup "com.spotify.Client"
+spawn-at-startup "steam"
+spawn-at-startup "thunderbird"
+spawn-sh-at-startup "wl-paste --watch cliphist store &"

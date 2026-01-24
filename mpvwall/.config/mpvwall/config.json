@@ -1,0 +1,9 @@
+{
+  "wallpapers_dir": "/home/mayhem/Pictures/wallpaper-animated",
+  "selected": "3440x1440.mp4",
+  "output": "ALL",
+  "mpv_options": "loop no-audio gpu-context=wayland vid=1 hwdec=auto-safe panscan=1",
+  "layer": "background",
+  "recursive": false,
+  "enable_ipc": false
+}

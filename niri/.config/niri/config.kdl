@@ -1,0 +1,68 @@
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://yalter.github.io/niri/Configuration:-Introduction
+
+include "layout.kdl"
+include "input.kdl"
+include "./dms/outputs.kdl"
+include "keybinds.kdl"
+include "window-rules.kdl"
+include "./dms/colors.kdl"
+//include "./dms/layout.kdl"
+include "./dms/wpblur.kdl"
+include "./dms/alttab.kdl"
+include "startup.kdl"
+
+workspace "Web" {
+  open-on-output "DP-3"
+}
+
+workspace "Chat" {
+  open-on-output "DP-3"
+}
+
+workspace "Music" {
+  open-on-output "DP-3"
+}
+
+workspace "Gaming" {
+  open-on-output "DP-3"
+}
+
+workspace "E-Mail" {
+  open-on-output "DP-3"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+debug {
+  honor-xdg-activation-with-invalid-serial
+}
+
+environment {
+  XDG_CURRENT_DESKTOP "niri"
+  QT_QPA_PLATFORM "wayland"
+  QT_QPA_PLATFORMTHEME "gtk3"
+  QT_QPA_PLATFORMTHEME_QT6 "gtk3"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  DMS_SCREENSHOT_EDITOR "swappy"
+  MOZ_ENABLE_WAYLAND "1"
+  EDITOR "nvim"
+  VISUAL "nvim"
+}
+
+cursor {
+  xcursor-theme "Ninomae-Ina-nis"
+  xcursor-size 24
+}
+
+animations {
+
+}

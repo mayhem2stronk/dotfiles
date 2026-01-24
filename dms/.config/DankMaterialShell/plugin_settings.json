@@ -1,0 +1,40 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "linuxWallpaperEngine": {
+    "enabled": false,
+    "generateStaticWallpaper": true,
+    "monitorScenes": {
+      "DP-3": "931403650"
+    }
+  },
+  "grimblast": {
+    "enabled": true
+  },
+  "dankActions": {
+    "enabled": true,
+    "variants": [
+      {
+        "icon": "refresh",
+        "displayText": "",
+        "displayCommand": "",
+        "clickCommand": "mmsg -d reload_config",
+        "middleClickCommand": "",
+        "rightClickCommand": "",
+        "updateInterval": 0,
+        "showIcon": true,
+        "showText": true,
+        "visibilityCommand": "",
+        "visibilityInterval": 0,
+        "id": "variant_1768138371662",
+        "name": "MangoWC reload config"
+      }
+    ]
+  },
+  "dankKDEConnect": {
+    "enabled": false,
+    "selectedDeviceId": "e3e5cf76_9a4b_46ba_9623_6b4f19cfdd61"
+  }
+}
