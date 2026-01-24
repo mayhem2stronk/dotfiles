@@ -1,0 +1,49 @@
+##-- Style -------------------------------
+default_border pixel 2
+default_floating_border pixel 2
+smart_borders off
+
+titlebar_border_thickness 2
+titlebar_padding 6 6
+title_align center
+
+gaps inner 10
+gaps outer 5
+
+##-- Colors ------------------------------
+set $sway_cl_col_bg #0a080a
+set $sway_cl_col_fg #a8abc0
+set $sway_cl_col_in #404159
+set $sway_cl_col_afoc #eb6f92
+set $sway_cl_col_ifoc #eb6f92
+set $sway_cl_col_ufoc #d3869b
+set $sway_cl_col_urgt #94725A
+set $sway_cl_col_phol #0a080a
+set $sway_cl_col_in2 $sway_cl_col_afoc
+
+# class                  border              backgr.             text              indicator         child_border
+client.focused           $sway_cl_col_afoc   $sway_cl_col_afoc   $sway_cl_col_bg   $sway_cl_col_in2   $sway_cl_col_afoc
+#client.focused_inactive  $sway_cl_col_ifoc   $sway_cl_col_ifoc   $sway_cl_col_bg   $sway_cl_col_in   $sway_cl_col_ufoc
+#client.unfocused         $sway_cl_col_ufoc   $sway_cl_col_ufoc   $sway_cl_col_fg   $sway_cl_col_in2   $sway_cl_col_ufoc
+#client.urgent            $sway_cl_col_urgt   $sway_cl_col_urgt   $sway_cl_col_fg   $sway_cl_col_in   $sway_cl_col_urgt
+#client.placeholder       $sway_cl_col_phol   $sway_cl_col_phol   $sway_cl_col_fg   $sway_cl_col_in   $sway_cl_col_phol
+#client.background        $sway_cl_col_bg
+
+##-- Gtk themes ------------------------------
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Dracula'
+    gsettings set $gnome-schema icon-theme 'Dracula'
+    gsettings set $gnome-schema cursor-theme 'Qogirr'
+    gsettings set $gnome-schema font-name 'Noto Sans 9'
+    gsettings set org.gnome.desktop.wm.preferences button-layout ''
+    gsettings set org.gnome.desktop.wm.preferences theme "Dracula"
+}
+
+seat seat0 xcursor_theme Qogirr 24
+
+set $opacity 0.98
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+

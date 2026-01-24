@@ -1,0 +1,17 @@
+## Touchpad / Mouse
+input "*" {
+    dwt enabled
+    tap enabled
+    natural_scroll disabled
+    middle_emulation enabled
+    accel_profile "flat"
+	  pointer_accel 0.5
+}
+
+## Keyboard Layout
+input "type:keyboard" {
+    xkb_layout de
+    repeat_delay 600
+    repeat_rate 20
+    xkb_numlock enabled
+}

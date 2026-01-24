@@ -1,0 +1,15 @@
+# Import GTK settings
+#exec_always import-gsettings
+
+# Start gnome-settings-daemon for xsettings
+#exec /usr/lib/gsd-xsettings
+
+exec systemctl --user enable --now noctalia
+exec_always pkill kanshi; exec kanshi
+#exec vesktop
+#exec steam
+#exec com.spotify.Client
+#exec firefox
+#exec thunderbird
+exec autotiling
+exec qs -c noctalia-shell ipc call idleInhibitor toggle

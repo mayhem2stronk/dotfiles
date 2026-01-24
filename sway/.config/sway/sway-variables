@@ -1,0 +1,6 @@
+set $terminal kitty
+set $files nautilus -w
+set $editor geany
+set $browser firefox
+set $launcher qs -c noctalia-shell ipc call launcher toggle
+set $lockscreen qs -c noctalia-shell ipc call lockScreen lock
