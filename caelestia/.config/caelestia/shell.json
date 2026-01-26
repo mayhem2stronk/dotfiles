@@ -22,7 +22,7 @@
     },
     "anim": {
       "durations": {
-        "scale": 0.775670670310701
+        "scale": 0.7526424500143833
       }
     },
     "transparency": {
@@ -121,7 +121,7 @@
       "statusIcons": true
     },
     "workspaces": {
-      "shown": 6,
+      "shown": 5,
       "activeIndicator": true,
       "occupiedBg": false,
       "showWindows": true,
