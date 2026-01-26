@@ -34,7 +34,7 @@
   "general": {
     "apps": {
       "terminal": [
-        "foot"
+        "kitty"
       ],
       "audio": [
         "pavucontrol"
@@ -43,7 +43,7 @@
         "mpv"
       ],
       "explorer": [
-        "thunar"
+        "nautilus"
       ]
     },
     "idle": {
@@ -502,7 +502,7 @@
     }
   },
   "services": {
-    "weatherLocation": "",
+    "weatherLocation": "Salzgitter Ringelheim",
     "useFahrenheit": false,
     "useTwelveHourClock": false,
     "gpuType": "",

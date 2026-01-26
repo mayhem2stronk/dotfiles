@@ -1,0 +1,32 @@
+resize_algorithm = none
+hotspot_x = 0.00
+hotspot_y = 0.00
+
+define_size = 32, ns-resize_000.png, 100
+define_size = 32, ns-resize_001.png, 100
+define_size = 32, ns-resize_002.png, 100
+define_size = 32, ns-resize_003.png, 100
+define_size = 32, ns-resize_004.png, 100
+define_size = 32, ns-resize_005.png, 100
+define_size = 32, ns-resize_006.png, 100
+define_size = 48, ns-resize_007.png, 100
+define_size = 48, ns-resize_008.png, 100
+define_size = 48, ns-resize_009.png, 100
+define_size = 48, ns-resize_010.png, 100
+define_size = 48, ns-resize_011.png, 100
+define_size = 48, ns-resize_012.png, 100
+define_size = 48, ns-resize_013.png, 100
+define_size = 64, ns-resize_014.png, 100
+define_size = 64, ns-resize_015.png, 100
+define_size = 64, ns-resize_016.png, 100
+define_size = 64, ns-resize_017.png, 100
+define_size = 64, ns-resize_018.png, 100
+define_size = 64, ns-resize_019.png, 100
+define_size = 64, ns-resize_020.png, 100
+
+define_override = bottom_side
+define_override = n-resize
+define_override = s-resize
+define_override = size_ver
+define_override = top_side
+define_override = v_double_arrow
