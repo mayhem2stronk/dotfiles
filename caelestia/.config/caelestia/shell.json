@@ -32,6 +32,7 @@
     }
   },
   "general": {
+    "logo": "cachyos",
     "apps": {
       "terminal": [
         "kitty"
@@ -96,7 +97,20 @@
   "background": {
     "enabled": true,
     "desktopClock": {
-      "enabled": false
+      "enabled": true,
+      "scale": 1,
+      "position": "bottom-center",
+      "invertColors": false,
+      "background": {
+        "enabled": true,
+        "opacity": 0.7,
+        "blur": true
+      },
+      "shadow": {
+        "enabled": true,
+        "opacity": 0.7,
+        "blur": 0.4
+      }
     },
     "visualiser": {
       "enabled": false,
@@ -145,6 +159,7 @@
       "showMicrophone": false,
       "showKbLayout": false,
       "showNetwork": true,
+      "showWifi": true,
       "showBluetooth": true,
       "showBattery": true,
       "showLockStatus": false
