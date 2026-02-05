@@ -32,7 +32,7 @@
     }
   },
   "general": {
-    "logo": "cachyos",
+    "logo": "",
     "apps": {
       "terminal": [
         "kitty"
