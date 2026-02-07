@@ -1,100 +1,108 @@
-# Don't print a new line at the start of the prompt
-add_newline = true
-# Pipes ╰─ ╭─
-# Powerline symbols                                     
-# Wedges 🭧🭒 🭣🭧🭓
-# Random noise 🬖🬥🬔🬗
-# Cool stuff 󰜥   
-
-# format = """
-# $cmd_duration$username$hostname $directory $git_branch
-# $character
-# """
 format = """
-$cmd_duration 󰜥 $directory $git_branch
-$character"""
+[╭](bold overlay1)$os$username\
+$directory\
+$git_branch\
+$git_status\
+$git_commit\
+$time\
+\n$character\
+$conda\
+$python\
+"""
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-success_symbol = "[   ](bold fg:blue)"
-error_symbol = "[   ](bold fg:red)"
+# =============Visauls================
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+palette = 'cyberdream'
 
-[git_branch]
-style = "bg: cyan"
-symbol = "󰘬"
-truncation_length = 12
-truncation_symbol = ""
-format = "󰜥 [](bold fg:cyan)[$symbol $branch(:$remote_branch)](fg:black bg:cyan)[ ](bold fg:cyan)"
+[palettes.cyberdream]
+text      = '#c7cfff'
+overlay1  = '#242937'
+color_fg0 = '#c7cfff'
+color_bg0 = '#0a0e14'
+color_bg1 = '#0f1117'
+color_bg3 = '#242937'
+color_blue   = '#5ea1ff'
+color_aqua   = '#5ef1ff'
+color_green  = '#5eff6c'
+color_orange = '#ffb65e'
+color_red    = '#ff6e5e'
+color_yellow = '#f1ff5e'
+color_pink   = '#ff5ea0'
+red = '#ff6e5e'
 
-[git_commit]
-commit_hash_length = 4
-tag_symbol = " "
-
-[git_state]
-format = '[\($state( $progress_current of $progress_total)\)]($style) '
-cherry_pick = "[🍒 PICKING](bold red)"
-
-[git_status]
-conflicted = " 🏳 "
-ahead = " 🏎💨 "
-behind = " 😰 "
-diverged = " 😵 "
-untracked = " 🤷 ‍"
-stashed = " 📦 "
-modified = " 📝 "
-staged = '[++\($count\)](green)'
-renamed = " ✍️ "
-deleted = " 🗑 "
-
-[hostname]
-ssh_only = false
-format =  "[•$hostname](bg:cyan bold fg:black)[](bold fg:cyan)"
-trim_at = ".companyname.com"
-disabled = false
-
-[line_break]
-disabled = false
-
-[memory_usage]
-disabled = true
-threshold = -1
-symbol = " "
-style = "bold dimmed green"
-
-[time]
-disabled = true
-format = '🕙[\[ $time \]]($style) '
-time_format = "%T"
+# =============Modules================
 
 [username]
-style_user = "bold bg:cyan fg:black"
-style_root = "red bold"
-format = "[](bold fg:cyan)[$user]($style)"
-disabled = false
 show_always = true
+style_user = "fg:text bold"
+style_root = "fg:red bold"
+format = '[ $user ]($style)'
+
+[os]
+disabled = false
+style = "fg:color_pink bold"
+format = "([ $symbol ]($style))"
+
+[os.symbols]
+Windows = ""
+Ubuntu = ""
+Debian = ""
+Arch = ""
+Manjaro = ""
+Linux = ""
+Macos = ""
+Unknown = ""
 
 [directory]
-home_symbol = "  "
-read_only = "  "
-style = "bg:green fg:black"
-truncation_length = 6
-truncation_symbol = " ••/"
-format = '[](bold fg:green)[󰉋 $path]($style)[](bold fg:green)'
-
+style = "fg:color_blue bold"
+format = '( in [ $path ]($style))'
+truncation_length = 3
+truncation_symbol = "…/"
 
 [directory.substitutions]
-"Desktop" = "  "
-"Documents" = "  "
-"Downloads" = "  "
-"Music" = " 󰎈 "
-"Pictures" = "  "
-"Videos" = "  "
-"GitHub" = " 󰊤 "
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music"     = " "
+"Pictures"  = " "
 
-[cmd_duration]
-min_time = 0
-format = '[](bold fg:yellow)[󰪢 $duration](bold bg:yellow fg:black)[](bold fg:yellow)'
+[git_branch]
+style = "fg:color_yellow"
+disabled = false
+symbol = ""
+format = '( on [$symbol $branch]($style))'
+
+[git_status]
+disabled = false
+style = "fg:color_orange"
+format = ' <([$all_status]($style))>'
+
+[git_commit]
+disabled = false
+only_detached = false
+format = ' [ $hash](fg:color_pink)'
+commit_hash_length = 6
+tag_disabled = false
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:color_aqua"
+format = '  [$time]($style)'
+
+[character]
+format = """
+[╰─$symbol](fg:overlay1) """
+success_symbol = '[](fg:text bold)'
+error_symbol   = '[](fg:red bold)'
+
+# =======Programs environments========
+
+[python]
+disabled = false
+symbol = ""
+format = '([$symbol $virtualenv](fg:color_yellow)) > '
+
+[conda]
+disabled = false
+format = '([$symbol $environment](fg:color_green)) > '
+
