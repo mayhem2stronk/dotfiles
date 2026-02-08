@@ -1,0 +1,18 @@
+binds {
+	scroll_event_delay = 0
+}
+
+misc {
+	focus_on_activate = true
+}
+
+source = ./variables.conf
+source = ./includes/keybinds.conf
+source = ./includes/env.conf
+source = ./includes/animations.conf
+source = ./includes/autostart.conf
+source = ./includes/rules.conf
+source = ./includes/input.conf
+source = ./includes/displays.conf
+source = ./includes/layout.conf
+#source = ./includes/decoration.conf
